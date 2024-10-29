@@ -1,0 +1,103 @@
+Html :::::
+
+<!-- <h1 class="counter">0</h1>
+    <div class="overlay">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="header">FITNATION</h1>
+    </div> -->
+
+
+css :::
+
+also add h1 and body and htm and * css 
+
+/* .overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    background-color: #000;
+}
+.bar{
+    width: 10vw;
+    height: 105vh;
+    background: #1a1a1a;
+}
+.counter{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10000;
+    color: #bcbcc4;
+    padding: 0.2rem 0.4rem;
+    font-size: 20vw;
+    font-family: Helvetica, sans-serif;
+} */
+
+
+Js ::::
+
+
+// function startloader () {
+//     let counterElem = document.querySelector('.counter');
+//     let counterValue = 0;
+
+//     function updatecounter () {
+//         if(counterValue === 100){
+//             return;
+//         }
+//         counterValue += Math.floor(Math.random()*10) +1;
+
+//         if(counterValue > 100){
+//             counterValue = 100;
+//         }
+//         counterElem.textContent = counterValue;
+
+//         let delay = Math.floor(Math.random()*200) + 50;
+//         setTimeout(updatecounter,delay)
+//     }
+
+//     updatecounter()
+    
+// }
+// startloader()
+
+// gsap.to(".counter",0.25,{
+//     delay:3,
+//     opacity:0
+// })
+
+
+// gsap.to(".bar",1.5,{
+//     delay:2.5,
+//     height:0,
+//     stagger:{
+//         amount:0.5,
+//     },
+//     ease:"power4.inout"
+// })
+
+// gsap.from(".header",0.25,{
+//     delay:4,
+//     y:700,
+//     stagger:{
+//         amount:0.5,
+//     },
+//     ease:"power4.inout"
+// })
