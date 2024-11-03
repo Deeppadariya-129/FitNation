@@ -94,3 +94,46 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
 });
+
+
+
+// image reload prblem solving
+// Array of image URLs to preload
+const imagesToPreload = [
+  "image1.jpg",
+  "image2.jpg",
+  "image3.jpg",
+  "image4.jpg",
+  "image5.jpg",
+  "image6.jpg",
+  "image7.jpg",
+  "image8.jpg",
+  "t_1.jpg",
+  "k.jpg",
+];
+
+// Function to preload all images
+function preloadImages(images, callback) {
+  let loadedImages = 0;
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      loadedImages++;
+      if (loadedImages === images.length) {
+        callback(); // Run callback when all images are loaded
+      }
+    };
+    img.onerror = () => {
+      console.error(`Failed to load image: ${src}`);
+    };
+  });
+}
+
+// Call the function on page load or when clicking a button
+window.addEventListener("DOMContentLoaded", () => {
+  preloadImages(imagesToPreload, () => {
+    document.body.classList.add("images-loaded");
+    // Code here to reveal the website content, e.g., removing a loading screen
+  });
+});
